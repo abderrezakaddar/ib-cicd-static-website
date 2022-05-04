@@ -105,6 +105,16 @@ pipeline {
                      rm -fr $WORKSPACE/ansible/id_rsa
                 '''
             }
-     }            
+     }
+          
+      
+      stage('Discord notif') {
+            agent any
+            steps {
+                echo 'Discord notif'
+            }
+     }          
+      
+          
   }
 }
