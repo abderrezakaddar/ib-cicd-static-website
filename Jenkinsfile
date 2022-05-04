@@ -105,14 +105,13 @@ pipeline {
                      rm -fr $WORKSPACE/ansible/id_rsa
                 '''
             }
+     }
           
      stage('Notification Dsicord') {
        agent any
        steps {
            echo 'test Discord'
            discordSend description : 'Hello' , enableArtifactsList : true, footer : '', webhookURL :'https://discord.com/api/webhooks/971457836276121670/Z-aLx7cJULq_p9nwlXhqOldM_fiecpxgmuvNdubxHxqha-uvkFhlXO3XW_mytk_GmYmj'
-       }
-     }
-     }            
+       }              
   }
 }
